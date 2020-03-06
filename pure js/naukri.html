@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class=container>
+        <div id="helo">
+    <form action="index.html" onsubmit="return add()">
+    <label>name :</label>
+    <input type="text" id="num1" onblur="add1()"><br>
+    <small id="num4"></small><br>
+
+    <label>age :</label>
+    <input type="number" id="num2"><br>
+    <small id="num5"></small><br>
+    <label>Email</label>
+    <input type="text" id="num11"><br>
+    <small id="num12"></small><br>
+
+ <input type="submit" value="submit">
+    </form>
+</div>
+</div>
+    <script>
+       function add(){
+          var x= document.getElementById("num1").value;
+          var y= document.getElementById("num2").value;
+          var l= document.getElementById("num11").value;
+
+          if((x=="")||(y=="")||(l=="")){
+            
+             document.getElementById("num4").innerHTML="fill the name";
+             document.getElementById("num5").innerHTML="fill the age";
+             document.getElementById("num12").innerHTML="fill the email";
+             
+
+             return false;
+
+          }else if((x.length<3)||(y.length<3)||(l.length<3)){
+          
+             document.getElementById("num4").innerHTML="Name length should be of four characters";
+             document.getElementById("num5").innerHTML="Password length should be of four characters";
+             document.getElementById("num12").innerHTML="email length should be of four characters";
+            
+             return false;
+          }else{
+          
+           return true;
+          }
+
+        }
+        var x=document.getElementById("num1").value;
+        function add1(){
+       if(x.length==""){
+           document.getElementById("num4").innerHTML="enter name";
+     
+       }else if(x.length>3){
+          document.getElementById("num4").innerHTML=null;
+       }
+        }
+    </script>
+    <style>
+        #num4{
+            color:red;
+        }
+        #num5{
+            color:red;
+        }
+        #num12{
+            color:red;
+        }
+        .container{
+            text-align: center;
+            height:300px;
+            width:500px;
+            padding:15px;
+            background: whitesmoke;
+            margin-top:200px ;
+            margin-left: 400px;
+            
+        }
+        #helo{
+            margin-top: 50px;
+        }
+
+
+        
+               
+    </style>
+   
+</body>
+</html>

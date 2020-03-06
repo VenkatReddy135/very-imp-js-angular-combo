@@ -1,0 +1,85 @@
+<html>
+    <head>
+      <title>objects</title>
+    </head>
+    <body>
+        <h1> creation of objects using "CARS"</h1>
+        <hr>
+      <script>
+
+          //variables//
+
+          var car1="bmw";
+          console.log(car1);
+
+          //arrays//
+         var cars=["bmw","benz","alto"];
+         for(i=0;i<cars.length;i+=2){
+             document.write(cars[2]+"<br>");
+         }
+
+         //objects//
+         var car={color:"blue",cost:25000,model:"benz",working:function(){
+             return "it works very fast"
+         }}
+          console.log(car.working());
+
+          //creation of objects using new constructorFunction //
+
+          function Car(color,cost,model,working){
+              this.color=color;
+              this.cost=cost;
+              this.model=model;
+              this.working=function(){
+                  return this.model +" "+"works at great speed";
+              }
+          
+          }
+              var car1=new Car("blue",25000,"benz");
+              console.log(car1.working());
+
+                
+                //creation of objects by using class which is an "es6" feature//
+
+              class Cars{
+                
+                  constructor(color,model,cost,working){
+                   this.clor=color;
+                   this.model=model,
+                   this.cost=cost;
+                   this.working=function(){
+                       return this.model+" "+"works at great speed"
+                  }
+                  }
+                  getFullName(){
+                      return this.model+" "+"working at higher level"
+                  }
+        
+              }
+             
+          
+              var car1=new Cars("black","alto",25000);
+              console.log(car1.getFullName());
+
+
+
+               //seal and freeze properties in objects//
+
+              var Employee={id:1,name:"venkat"};
+              
+              Employee.subject="maths"
+            //  Object.freeze(Employee);
+              Object.seal(Employee);
+              delete Employee.id;
+              Employee.salary=45000;
+              
+              console.log(Employee.id);
+
+
+
+              
+          
+          </script>
+        
+    </body>
+</html>

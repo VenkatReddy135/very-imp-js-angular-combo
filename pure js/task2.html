@@ -1,0 +1,32 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form>
+        <input type="radio" onclick="hide()" value="male" name="gender">male
+        <input type="radio" onclick="hide()" value="female"  name="gender">female
+        
+
+    </form>
+        <script>
+            // function hide(){
+            //     document.write("male")
+
+            // }
+            // function show(){
+            //     document.write("female")
+            // }
+            function hide(){
+                var x=document.getElementsByName('gender');
+                for(i=0;i<x.length;i++){
+                if(x[i].checked){
+                    document.write(x[i].value)
+                }
+            }
+            }
+
+
+        </script>
+    </body>
+</html>

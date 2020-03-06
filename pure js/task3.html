@@ -1,0 +1,25 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="num1"></p>
+        <button onclick="hello()">try</button>
+        <button onclick="add()" id="num5" disabled>try</button>
+        <script>
+            var str=["benz","bmw","alto"];
+           document.getElementById("num1").innerHTML=str;
+           function hello(){
+            str.sort();
+            document.getElementById("num1").innerHTML=str;
+           
+           }
+           function add(){
+               document.getElementById("num5").disabled=false;
+
+           }
+           
+        </script>
+        
+    </body>
+</html>
